@@ -13,11 +13,12 @@ for(const empty of empties) {
 
 
 function dragStart () {
-  console.log('start');
+  this.className += ' hold'
+  setTimeout(() => this.className = 'invisible', 0)
 }
 
 function dragEnd () {
-  console.log('end');
+  this.className = 'fill'
 }
 
 function dragEnter() {
